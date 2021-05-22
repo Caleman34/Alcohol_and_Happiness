@@ -1,5 +1,3 @@
-***Under Construction***
-
 # Do happier countries drink more or less than sad countries?
 
 ![Drinkingtogether](Images/drinkingtogether.png)
@@ -42,11 +40,11 @@ plt.savefig("Figures/Freedomof_life_choices.png")
 plt.show
 ```
 
-![Freedomoflifechoices](Figures/Freedomof_life_choices.png)
+![Freedomoflifechoices](Figures/Freedomof_life_choices.png,  width=410)
 
-![socialsuport](Figures/Social_Support.png)
+![socialsuport](Figures/Social_Support.png,  width=410)
 
-![perceptioncorruption](Figures/percofcorruption.png)
+![perceptioncorruption](Figures/percofcorruption.png,  width=410)
 
 ## Alcohol Consumption by Regions
 ```Jupyter
@@ -116,7 +114,6 @@ bottom_df = happiness_sort_df.nsmallest(10, "Happiness Score")
 sort_bottom_df = bottom_df.sort_values("Happiness Score", ascending = False)
 sort_bottom_df
 ```
-<<<<<<< HEAD
 
   * Moving the legend box from overlapping the pie chart
 ```python
@@ -143,7 +140,6 @@ plt.ylabel("Wine (Per Capita)")
 plt.tight_layout()
 plt.figure(figsize = (15,5))
 
-
 plt.savefig("Figures/top_andBottom_ten_wine.png")
 plt.show
 ```
@@ -163,5 +159,3 @@ plt.show
 ### Final Thoughts
   * Initially we thought the less happy a country was, the higher drinking consumption they would have.  However we found the opposite.
   * Is it because poor countries have less to spend or something else? More research is needed.
-=======
->>>>>>> c9b74a76972a62e9a0c52b86028383f455449c2e
