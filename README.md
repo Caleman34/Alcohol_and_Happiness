@@ -40,7 +40,7 @@ plt.savefig("Figures/Freedomof_life _choices.png")
 plt.show
 ```
 
-![Freedomof_life _choices](Figures/Freedomof_life _choices.png)
+![Freedomoflifechoices](Figures/Freedomof_life_choices.png)
 
 ```jupyter
 #scatter plot of gdp and happiness for all countries
