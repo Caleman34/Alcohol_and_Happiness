@@ -42,6 +42,34 @@ plt.show
 
 ![Freedomoflifechoices](Figures/Freedomof_life_choices.png)
 
+![socialsuport](Figures/Social_Support.png)
+
+![perceptioncorruption](Figures/percofcorruption.png)
+
+## Alcohol Consumption by Regions
+```Jupyter
+# group bar chart consumption by region
+region_all_graph = region_group_all_consumption.plot(kind = "bar", figsize = (15,8))
+column_names = region_group_all_consumption["Wine (Per Capita)"], ["Beer (Per Capita)"], ["Spirit (Per Capita)"], ["Happiness Score"]
+plt.title("Alcohol Consumption by Regions of Top and Bottom 10 Countries", fontsize = 20)
+plt.xlabel("Regions", fontsize = 20)
+plt.ylabel("Consumption of Alcohol Per Capita", fontsize = 20)
+
+plt.tight_layout()
+plt.savefig("Figures/t_b_10_region_consumption_bar.png")
+
+plt.show
+```
+![barchartallconcumption](Figures/t_b_10_region_consumption_bar.png)
+
+  * You have seen where alcohol consumption stands individually; Here we have a collective view on how it looks with all the Top/Bottom Ten Happiest countries. Another quick take away we have here is that Wine and Beer are in it for the number 1 spot! 
+
+## Analyzing the Data
+  * Used Linear regression on scatter plots to analyze trends
+  * .groupby was used to group the data by region for analysis
+  * Bar charts and pie plots
+  * R-value was used on scatter plots
+
 ```jupyter
 #scatter plot of gdp and happiness for all countries
 
@@ -71,15 +99,64 @@ plt.show()
 
 ![all_happy_gdp_scatter](Figures/all_happy_gdp_scatter.png)
 
-```jupyter
+## Challenges and Victories
+
+  * Sorting the data in order to get the data for the top and bottom 10 countries
+```python
 # top 10 data frame
 top_df = happiness_sort_df.nlargest(10, "Happiness Score")
 top_df
 ```
 
-```jupyter
+```python
 # Bottom 10 data frame
 bottom_df = happiness_sort_df.nsmallest(10, "Happiness Score")
 sort_bottom_df = bottom_df.sort_values("Happiness Score", ascending = False)
 sort_bottom_df
 ```
+
+  * Moving the legend box from overlapping the pie chart
+```python
+top_bottom_df.groupby(["Region"]).mean().plot(kind = "pie", y = "Perceptions of Corruption",  autopct='%1.1f%%',figsize=(9,9), textprops={'color':"w"})
+plt.ylabel("")
+plt.title("Region Perceptions of Corruption", fontsize = 20)
+plt.legend(bbox_to_anchor=(1.05, 1.0), loc='upper left')
+plt.tight_layout()
+
+plt.savefig("Figures/percofcorruption.png")
+plt.show
+```
+
+  * Understanding how seaborn works and debugging undefined variable
+```python
+
+plt.figure(figsize = (15,6))
+plt.bar(top_bottom_df["Country"], top_bottom_df["Wine (Per Capita)"])
+plt.title("Top and Bottom 10 Happiest Countries & Wine ", fontsize = 20)
+sns.barplot(x ='Country', y= 'Wine (Per Capita)', data = top_bottom_df, palette = 'turbo')
+sns.set_theme(style="whitegrid")
+plt.xticks(rotation = 60)
+plt.ylabel("Wine (Per Capita)")
+plt.tight_layout()
+plt.figure(figsize = (15,5))
+
+
+plt.savefig("Figures/top_andBottom_ten_wine.png")
+plt.show
+```
+
+## Conclusion
+
+### Discussion
+  * Finding a relationship between happiness and drinking consumption is more complicated than we initially thought.
+  * We needed to find what makes a country happier than others; and that involves analyzing social support, views of corruption, GDP, and freedom of life choices for each country and region
+
+### Findings
+  * Strong correlation between a a countries’ happiness and GDP
+  * Countries with higher social support, freedom of choices, and less views of corruption tend to have higher GDP and happiness scores
+  * The region where a person lives also impacts a person’s happiness.
+  * Sub-Sahara Africa and Southeast Asia vs. Western Europe and Australia and New Zealand
+
+### Final Thoughts
+  * Initially we thought the less happy a country was, the higher drinking consumption they would have.  However we found the opposite.
+  * Is it because poor countries have less to spend or something else? More research is needed.
