@@ -40,11 +40,11 @@ plt.savefig("Figures/Freedomof_life_choices.png")
 plt.show
 ```
 
-![Freedomoflifechoices](Figures/Freedomof_life_choices.png) width=410
+![Freedomoflifechoices](Figures/Freedomof_life_choices.png | width=250)
 
-![socialsuport](Figures/Social_Support.png), width=410
+![socialsuport](Figures/Social_Support.png | width=150)
 
-![perceptioncorruption](Figures/percofcorruption.png) width=410
+![perceptioncorruption](Figures/percofcorruption.png | width=350)
 
 ## Alcohol Consumption by Regions
 ```Jupyter
