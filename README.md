@@ -36,7 +36,7 @@ plt.title("Regional Freedom of Life Choices", fontsize = 20)
 plt.legend(bbox_to_anchor=(1.05, 1.0), loc='upper left')
 plt.tight_layout()
 
-plt.savefig("Figures/Freedomof_life _choices.png")
+plt.savefig("Figures/Freedomof_life_choices.png")
 plt.show
 ```
 
