@@ -24,12 +24,12 @@
   * Gross domestic product (GDP) is a monetary measure of the market value of all the final goods and services produced in a specific time period
   * North America Highest and Lowest GDP Sub- Saharan African
 
-## Diggin Deeper into the Data
+## Digging Deeper into the Data
 
   * Let’s dig deeper to find out more about happiness and why some countries are happier than others?
   * We found a dataset that included some information into what made up the Happiness Score for Countries/Regions . We merged the data to correlate with how these can possibly affect alcohol consumption .
 
-````jupyter
+```jupyter
 top_bottom_df.groupby(["Region"]).mean().plot(kind = "pie", y = "Life Choices", autopct='%1.1f%%',figsize=(9,9), textprops={'color':"w"})
 plt.ylabel("")
 plt.title("Regional Freedom of Life Choices", fontsize = 20)
@@ -67,7 +67,6 @@ plt.ylabel("GDP Per Capita", fontsize = 15)
 
 plt.savefig("Figures/all_happy_gdp_scatter.png")
 plt.show()
-
 ```
 
 ![all_happy_gdp_scatter](Figures/all_happy_gdp_scatter.png)
@@ -79,7 +78,6 @@ top_df
 ```
 
 ```jupyter
-
 # Bottom 10 data frame
 bottom_df = happiness_sort_df.nsmallest(10, "Happiness Score")
 sort_bottom_df = bottom_df.sort_values("Happiness Score", ascending = False)
