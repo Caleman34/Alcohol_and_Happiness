@@ -1,3 +1,5 @@
+***Under Construction***
+
 # Do happier countries drink more or less than sad countries?
 
 ![Drinkingtogether](Images/drinkingtogether.png)
@@ -114,6 +116,7 @@ bottom_df = happiness_sort_df.nsmallest(10, "Happiness Score")
 sort_bottom_df = bottom_df.sort_values("Happiness Score", ascending = False)
 sort_bottom_df
 ```
+<<<<<<< HEAD
 
   * Moving the legend box from overlapping the pie chart
 ```python
@@ -160,3 +163,5 @@ plt.show
 ### Final Thoughts
   * Initially we thought the less happy a country was, the higher drinking consumption they would have.  However we found the opposite.
   * Is it because poor countries have less to spend or something else? More research is needed.
+=======
+>>>>>>> c9b74a76972a62e9a0c52b86028383f455449c2e
