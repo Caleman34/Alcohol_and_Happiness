@@ -1,4 +1,4 @@
-## Repository Summary info
+## Repository Info:
 
 Repository Size: 27 MB
 
@@ -10,7 +10,7 @@ This data analysis compared the drinking rates to a country's happiness score to
 
 ![lp2](Images/lp2.png)
 
-# Do happier countries drink more or less than sad countries?
+# Do Happier Countries Drink More or Less Than Sad Countries?
 
 ![Drinkingtogether](Images/drinkingtogether.png)
 
