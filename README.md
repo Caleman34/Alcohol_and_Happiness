@@ -1,3 +1,15 @@
+## Repository Summary info
+
+Repository Size: 27 MB
+
+Code can be run using Visual Studio Code or Jupyter Notebook
+
+This data analysis compared the drinking rates to a country's happiness score to determine if alcohol and happiness are related.
+
+![sp1](Images/sp1.png)
+
+![lp2](Images/lp2.png)
+
 # Do happier countries drink more or less than sad countries?
 
 ![Drinkingtogether](Images/drinkingtogether.png)
